@@ -110,10 +110,13 @@ open class ArticlePreviewView: ArticleView, ArticleViewDataSource {
 			self.imageDownloader?.loadImage(from: posterData.avatar, success: {[weak posterComponent] (image) in
 				posterComponent?.setImage = image
 			}, failure: nil)
+			
 			posterComponent.posterData = posterData
 			
 		case .textContent(let textContent):
 			guard let textContentComponent = component as? ArticleTextContent else { return }
+			textContentComponent.placeholderText = nil
+			textContentComponent.preview = true
 			textContentComponent.contentText = textContent
 
 		case .separator:
@@ -125,7 +128,7 @@ open class ArticlePreviewView: ArticleView, ArticleViewDataSource {
 			self.imageDownloader?.loadImage(from: contentData.url, success: {[weak imageContentComponent] (image) in
 				imageContentComponent?.setImage = image
 				}, failure: nil)
-			
+			imageContentComponent.preview = true
 			imageContentComponent.contentData = contentData
 
 		}

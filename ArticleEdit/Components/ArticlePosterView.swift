@@ -98,6 +98,16 @@ class ArticlePosterView: ArticleComponent {
 			make.centerY.equalToSuperview()
 		}
 		
+		let sep = UIView()
+		sep.backgroundColor = UIColor.gray
+		self.addSubview(sep)
+		sep.snp.makeConstraints { (make) in
+			make.left.equalToSuperview().offset(AEUIConfig.shared.posterConfig.insets.left)
+			make.right.equalToSuperview().offset(-AEUIConfig.shared.posterConfig.insets.right)
+			make.bottom.equalToSuperview()
+			make.height.equalTo(1 / UIScreen.main.scale)
+		}
+		
 	}
 	
 	
