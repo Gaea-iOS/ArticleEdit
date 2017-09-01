@@ -17,7 +17,7 @@ public enum ArticlePreviewItemType {
 	case separator
 }
 
-public class ArticlePreviewView: ArticleView, ArticleViewDataSource {
+open class ArticlePreviewView: ArticleView, ArticleViewDataSource {
 
 	public var imageDownloader: ImageDownloadType?
 
@@ -29,7 +29,7 @@ public class ArticlePreviewView: ArticleView, ArticleViewDataSource {
 	}
 	
 	public convenience init(frame: CGRect,
-	                        items: [ArticlePreviewItemType],
+	                        items: [ArticlePreviewItemType] = [],
 	                        imageDownloader: ImageDownloadType?) {
 		self.init(frame: frame)
 		self.editingItems = items

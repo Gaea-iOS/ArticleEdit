@@ -16,7 +16,7 @@ public enum ArticleEditingItemType {
 	case separator
 }
 
-public class ArticleEditingView: ArticleView, ArticleViewDataSource {
+open class ArticleEditingView: ArticleView, ArticleViewDataSource {
 	
 	public static let defaultEditingItems: [ArticleEditingItemType] = [
 		.headImage(nil),

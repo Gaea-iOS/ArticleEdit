@@ -27,7 +27,7 @@ public protocol ArticleViewDataSource: NSObjectProtocol {
 	func articleView(_ articleView: ArticleView, configComponent component: ArticleComponent, forRowAt row: Int) -> Void
 }
 
-public class ArticleView: UIScrollView, UIScrollViewDelegate {
+open class ArticleView: UIScrollView, UIScrollViewDelegate {
 	
 	public var components: [ArticleComponent] = []
 	
@@ -39,7 +39,7 @@ public class ArticleView: UIScrollView, UIScrollViewDelegate {
 		return view
 	}()
 	
-	override public var contentSize: CGSize {
+	override open var contentSize: CGSize {
 		didSet {
 			super.contentSize = contentSize
 			var cframe = contentView.frame
@@ -62,7 +62,7 @@ public class ArticleView: UIScrollView, UIScrollViewDelegate {
 		endKeyboardHandle()
 	}
 	
-	override public func willMove(toSuperview newSuperview: UIView?) {
+	override open func willMove(toSuperview newSuperview: UIView?) {
 		super.willMove(toSuperview: newSuperview)
 		reloadData()
 	}
