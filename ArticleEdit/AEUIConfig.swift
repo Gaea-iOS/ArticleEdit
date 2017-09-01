@@ -18,8 +18,16 @@ class AEUIConfig: NSObject {
 	}
 	
 	static func image(name: String) -> UIImage? {
-		let bundle = Bundle(path: Bundle.main.path(forResource: "Resource", ofType: "bundle") ?? "")
-		return UIImage(named: name, in: bundle, compatibleWith: nil)
+
+		let path = Bundle(for: ArticleView.self).path(forResource: "ArticleEdit", ofType: "bundle") ?? ""
+		
+		let path2 = Bundle(path: path)?.path(forResource: "ArticleEdit", ofType: "bundle") ?? ""
+		
+		let bundle = Bundle(path: path2)
+		
+		let image = UIImage(named: name, in: bundle, compatibleWith: nil)
+		
+		return image
 	}
 	
 	class TextContentConfig {

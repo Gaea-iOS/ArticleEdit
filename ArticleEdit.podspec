@@ -30,10 +30,12 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'ArticleEdit/Classes/**/*'
+  s.source_files = 'ArticleEdit/**/*.swift'
+
+  # s.resource = "ArticleEdit/Assets/ArticleEdit.bundle"
 
   s.resource_bundles = {
-    'ArticleEdit' => ['ArticleEdit/Assets/*']
+    'ArticleEdit' => ['ArticleEdit/ArticleEdit.bundle']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
