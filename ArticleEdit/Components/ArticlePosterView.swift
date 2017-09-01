@@ -89,7 +89,7 @@ class ArticlePosterView: ArticleComponent {
 		}
 		
 		nameLabel.snp.makeConstraints { (make) in
-			make.left.equalTo(self.avatarView)
+			make.left.equalTo(self.avatarView.snp.right).offset(10)
 			make.centerY.equalToSuperview()
 		}
 		
