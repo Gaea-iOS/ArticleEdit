@@ -1,0 +1,32 @@
+{
+  "name": "ArticleEdit",
+  "version": "0.1.0",
+  "summary": "A short description of ArticleEdit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/GarenChen/ArticleEdit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "GarenChen": "915574843@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/GarenChen/ArticleEdit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ArticleEdit/Classes/**/*",
+  "resource_bundles": {
+    "ArticleEdit": [
+      "ArticleEdit/Assets/*"
+    ]
+  },
+  "dependencies": {
+    "SnapKit": [
+      "3.2.0"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ArticleEdit_Example' do
+  pod 'ArticleEdit', :path => '../'
+
+  target 'ArticleEdit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

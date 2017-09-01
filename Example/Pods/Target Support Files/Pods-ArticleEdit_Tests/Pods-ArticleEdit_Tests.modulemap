@@ -1,0 +1,6 @@
+framework module Pods_ArticleEdit_Tests {
+  umbrella header "Pods-ArticleEdit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
