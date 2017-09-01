@@ -12,7 +12,7 @@ import UIKit
 
 /// 图片上传协议
 public protocol ImageUploadType {
-	func upload(_ image: UIImage, success: (String) -> Void, failure: ((Error?) -> Void)?)
+	func upload(_ image: UIImage, success:@escaping (String) -> Void, failure: ((Error?) -> Void)?)
 }
 
 /// 图片选择协议

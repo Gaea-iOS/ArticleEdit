@@ -13,7 +13,7 @@ import ArticleEdit
 /// 默认没有上传
 class DefaulImageUpLoader: ImageUploadType {
 	
-	func upload(_ image: UIImage, success: (String) -> Void, failure: ((Error?) -> Void)? = nil) {
+	func upload(_ image: UIImage, success: @escaping (String) -> Void, failure: ((Error?) -> Void)? = nil) {
 		success("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504179414487&di=51cd5866a4cfa388302f643777457de8&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01007358084d3ca84a0d304f974f6b.jpg%40900w_1l_2o_100sh.jpg")
 	}
 }
