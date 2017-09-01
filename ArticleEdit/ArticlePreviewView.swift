@@ -21,9 +21,10 @@ public class ArticlePreviewView: ArticleView, ArticleViewDataSource {
 
 	public var imageDownloader: ImageDownloadType?
 
-	private var editingItems: [ArticlePreviewItemType] = [] {
+	public var editingItems: [ArticlePreviewItemType] = [] {
 		didSet {
 			debugPrint(editingItems.debugDescription)
+			reloadData()
 		}
 	}
 	
