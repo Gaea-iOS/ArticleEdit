@@ -15,6 +15,9 @@ public class ArticleImageContentData: CustomDebugStringConvertible {
 	public var imageWidth: Int = 0
 	public var imageHeight: Int = 0
 	
+	public init() {
+	}
+	
 	public var debugDescription: String {
 		return "url: \(String(describing: url)), imageDescription: \(String(describing: imageDescription)),{\(imageWidth),\(imageHeight)} "
 	}

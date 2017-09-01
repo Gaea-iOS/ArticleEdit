@@ -13,7 +13,10 @@ public class ArticlePosterData: CustomDebugStringConvertible {
 	public var avatar: String?
 	public var name: String?
 	public var dateString: String?
-
+	
+	public init() {
+	}
+	
 	public var debugDescription: String {
 		return "avatar: \(String(describing: avatar)), name: \(String(describing: name)), dateString: \(String(describing: dateString)) "
 	}

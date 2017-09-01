@@ -18,7 +18,7 @@ class AEUIConfig: NSObject {
 	}
 	
 	static func image(name: String) -> UIImage? {
-		let bundle = Bundle(for: self)
+		let bundle = Bundle(path: Bundle.main.path(forResource: "Resource", ofType: "bundle") ?? "")
 		return UIImage(named: name, in: bundle, compatibleWith: nil)
 	}
 	
