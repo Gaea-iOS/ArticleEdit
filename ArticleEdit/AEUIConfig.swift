@@ -107,13 +107,7 @@ public class AEUIConfig: NSObject {
 		
 		public var maxTextCount: Int = 20
 		
-		public var titleFont: UIFont = {
-			if #available(iOS 8.2, *) {
-				return UIFont.systemFont(ofSize: 16, weight: UIFontWeightMedium)
-			} else {
-				return UIFont.boldSystemFont(ofSize: 16)
-			}
-		}()
+		public var titleFont: UIFont = UIFont.boldSystemFont(ofSize: 18)
 		
 		public var titleColor: UIColor = .black
 		
