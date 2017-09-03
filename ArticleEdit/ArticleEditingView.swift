@@ -199,7 +199,7 @@ open class ArticleEditingView: ArticleView, ArticleViewDataSource {
 			
 			self.imageDownloader?.loadImage(from: contentData.url, success: {[weak imageContentComponent] (image) in
 				imageContentComponent?.setImage = image
-			}, failure: nil)
+            }, failure: nil)
 			
 			imageContentComponent.didDeleteImage = { [weak self] in
 				guard let `self` = self else { return }

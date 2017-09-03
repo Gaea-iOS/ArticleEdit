@@ -99,7 +99,7 @@ class ArticlePosterView: ArticleComponent {
 		}
 		
 		let sep = UIView()
-		sep.backgroundColor = UIColor.lightGray
+		sep.backgroundColor = AEUIConfig.shared.posterConfig.separatorColor
 		self.addSubview(sep)
 		sep.snp.makeConstraints { (make) in
 			make.left.equalToSuperview().offset(AEUIConfig.shared.posterConfig.insets.left)

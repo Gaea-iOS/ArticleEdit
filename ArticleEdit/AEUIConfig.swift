@@ -56,18 +56,19 @@ class AEUIConfig: NSObject {
 		
 		var height: CGFloat = UIScreen.main.bounds.size.width / 3
 		
+        var headImagePlaceholder: UIImage? = AEUIConfig.image(name: "icon_headImage_loading.png")
+        
 		var addedButtonTitle: String? = "添加宣传图"
 		var addedButtonTitleFont: UIFont = UIFont.systemFont(ofSize: 16)
 		var addedButtonTitleColor: UIColor = UIColor.gray
 		var addedButtonImage: UIImage? = AEUIConfig.image(name: "icon_addimg99.png")
-//			UIImage(named: "icon_addimg99.png")
-		
+	
 		
 		var changeButtonTitle: String? = "选择宣传图"
 		var changeButtonTitleFont: UIFont = UIFont.systemFont(ofSize: 14)
 		var changeButtonTitleColor: UIColor = UIColor.white
 		var changeButtonImage: UIImage? = AEUIConfig.image(name: "icon_changeimg.png")
-//			UIImage(named: "icon_changeimg.png")
+
 		var changeButtonSize: CGSize = CGSize(width:128, height: 44)
 		
 		var bottomSeparatorColor: UIColor = UIColor(red: 0.94, green: 0.94, blue: 0.94, alpha: 1.0)
@@ -80,8 +81,9 @@ class AEUIConfig: NSObject {
 	class ImageContentConfig {
 		var minimumsHeight: CGFloat = 100
 		
+        var imageContentPlaceholder: UIImage? = AEUIConfig.image(name: "icon_imageContent_loading.png")
+        
 		var deletedButtonImage: UIImage? = AEUIConfig.image(name: "btn_del.png")
-//			UIImage(named: "btn_del.png")
 		
 		var editingViewBackgroundColor: UIColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.5)
 		
@@ -90,7 +92,6 @@ class AEUIConfig: NSObject {
 		var editingContentTextColor: UIColor = .white
 		
 		var editingButtonImage: UIImage? = AEUIConfig.image(name: "icon_editor.png")
-//			UIImage(named: "icon_editor.png")
 		
 		var editingButtonTextFont: UIFont = UIFont.systemFont(ofSize: 14)
 		
@@ -123,9 +124,11 @@ class AEUIConfig: NSObject {
 	
 	class PosterConfig {
 		var avaterHeight: CGFloat = 44
+        var avatarPlaceholder: UIImage? = AEUIConfig.image(name: "user.png")
 		var nameColor: UIColor = UIColor.darkGray
 		var nameFont: UIFont = UIFont.systemFont(ofSize: 15)
 		var timeTextColot: UIColor = UIColor.lightGray
+        var separatorColor: UIColor = UIColor.lightGray
 		var timeFont: UIFont = UIFont.systemFont(ofSize: 15)
 		var insets: UIEdgeInsets = UIEdgeInsets(top: 20, left: 15, bottom: 20, right: 15)
 	}

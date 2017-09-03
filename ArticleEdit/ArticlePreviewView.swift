@@ -27,7 +27,7 @@ open class ArticlePreviewView: ArticleView, ArticleViewDataSource {
 			reloadData()
 		}
 	}
-	
+    
 	public convenience init(frame: CGRect,
 	                        items: [ArticlePreviewItemType] = [],
 	                        imageDownloader: ImageDownloadType?) {
@@ -95,7 +95,9 @@ open class ArticlePreviewView: ArticleView, ArticleViewDataSource {
 			
 			self.imageDownloader?.loadImage(from: imageKey, success: {[weak headImageComponent] (image) in
 				headImageComponent?.setImage = image
-			}, failure: nil)
+            }, failure: { [weak headImageComponent] _ in
+                    headImageComponent?.setImage = AEUIConfig.shared.headImageContentConfig.headImagePlaceholder
+            })
 			
 			
 		case .title(let title):
@@ -109,7 +111,9 @@ open class ArticlePreviewView: ArticleView, ArticleViewDataSource {
 			}
 			self.imageDownloader?.loadImage(from: posterData.avatar, success: {[weak posterComponent] (image) in
 				posterComponent?.setImage = image
-			}, failure: nil)
+                }, failure: { [weak posterComponent] _ in
+                    posterComponent?.setImage = AEUIConfig.shared.posterConfig.avatarPlaceholder
+            })
 			
 			posterComponent.posterData = posterData
 			
@@ -127,7 +131,9 @@ open class ArticlePreviewView: ArticleView, ArticleViewDataSource {
 			
 			self.imageDownloader?.loadImage(from: contentData.url, success: {[weak imageContentComponent] (image) in
 				imageContentComponent?.setImage = image
-				}, failure: nil)
+            }, failure: { [weak imageContentComponent] _ in
+                imageContentComponent?.setImage = AEUIConfig.shared.imageContentConfig.imageContentPlaceholder
+            })
 			imageContentComponent.preview = true
 			imageContentComponent.contentData = contentData
 

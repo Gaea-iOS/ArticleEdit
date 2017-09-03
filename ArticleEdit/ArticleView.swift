@@ -15,7 +15,6 @@ public protocol ArticleViewDataSource: NSObjectProtocol {
 	/// - Parameter articleView: articleView实例
 	/// - Returns: 返回初始化后的component
 	func articleViewInitComponents(in articleView: ArticleView) -> [ArticleComponent]
-
 	
 	/// 配置component数据
 	///
