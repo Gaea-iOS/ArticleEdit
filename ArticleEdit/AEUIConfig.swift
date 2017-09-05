@@ -9,12 +9,11 @@
 import Foundation
 import UIKit
 
-public class AEUIConfig: NSObject {
+public class AEUIConfig {
 	
 	public static let shared = AEUIConfig()
 	
-	private override init() {
-		super.init()
+	private init() {
 	}
 	
 	static func image(name: String) -> UIImage? {
