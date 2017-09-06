@@ -19,12 +19,12 @@ public class AEUIConfig {
 	static func image(name: String) -> UIImage? {
 
 		let path = Bundle(for: ArticleView.self).path(forResource: "ArticleEdit", ofType: "bundle") ?? ""
-		
-		let path2 = Bundle(path: path)?.path(forResource: "ArticleEdit", ofType: "bundle") ?? ""
-		
-		let bundle = Bundle(path: path2)
+
+		let bundle = Bundle(path: path)
 		
 		let image = UIImage(named: name, in: bundle, compatibleWith: nil)
+		
+		print(path)
 		
 		return image
 	}

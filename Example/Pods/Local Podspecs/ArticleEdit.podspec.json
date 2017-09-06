@@ -1,6 +1,6 @@
 {
   "name": "ArticleEdit",
-  "version": "0.1.1",
+  "version": "0.1.8",
   "summary": "A short description of ArticleEdit.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "http://github.com/Gaea-iOS/ArticleEdit",
@@ -13,17 +13,13 @@
   },
   "source": {
     "git": "https://github.com/Gaea-iOS/ArticleEdit.git",
-    "tag": "0.1.1"
+    "tag": "0.1.8"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "ArticleEdit/**/*.swift",
-  "resource_bundles": {
-    "ArticleEdit": [
-      "ArticleEdit/ArticleEdit.bundle"
-    ]
-  },
+  "resources": "ArticleEdit/ArticleEdit.bundle",
   "dependencies": {
     "SnapKit": [
       "3.2.0"

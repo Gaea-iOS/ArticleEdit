@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ArticleEdit'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = 'A short description of ArticleEdit.'
 
 # This description is used to generate tags and improve search results.
@@ -32,11 +32,11 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'ArticleEdit/**/*.swift'
 
-  # s.resource = "ArticleEdit/Assets/ArticleEdit.bundle"
+  s.resource = "ArticleEdit/ArticleEdit.bundle"
 
-  s.resource_bundles = {
-    'ArticleEdit' => ['ArticleEdit/ArticleEdit.bundle']
-  }
+  # s.resource_bundles = {
+  #   'ArticleEdit' => ['ArticleEdit/ArticleEdit/*']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
