@@ -90,12 +90,12 @@ class ArticlePosterView: ArticleComponent {
 		
 		nameLabel.snp.makeConstraints { (make) in
 			make.left.equalTo(self.avatarView.snp.right).offset(10)
-			make.centerY.equalToSuperview()
+			make.centerY.equalTo(self.avatarView)
 		}
 		
 		timeLabel.snp.makeConstraints { (make) in
 			make.right.equalToSuperview().offset(-AEUIConfig.shared.posterConfig.insets.right)
-			make.centerY.equalToSuperview()
+			make.centerY.equalTo(self.avatarView)
 		}
 		
 		let sep = UIView()
