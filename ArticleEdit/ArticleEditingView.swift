@@ -44,6 +44,7 @@ open class ArticleEditingView: ArticleView, ArticleViewDataSource {
 	                 imageUploader: ImageUploadType?,
 	                 imageDownloader: ImageDownloadType?) {
 		self.init(frame: frame)
+		self.editingBottomHolderHeight = 350
 		self.editingItems = items
 		self.imageSelector = imageSelector
 		self.imageUploader = imageUploader

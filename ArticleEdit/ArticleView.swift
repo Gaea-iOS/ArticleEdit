@@ -31,6 +31,8 @@ open class ArticleView: UIScrollView, UIScrollViewDelegate {
 	public var components: [ArticleComponent] = []
 	
 	public weak var dataSource: ArticleViewDataSource?
+	
+	public var editingBottomHolderHeight: CGFloat = 0
 
 	public lazy var contentView: UIView = {
 		let view = UIView()
@@ -173,7 +175,7 @@ open class ArticleView: UIScrollView, UIScrollViewDelegate {
             return
         }
 
-		let contentHeight = max(lastFrame.origin.y + lastFrame.size.height + 350, UIScreen.main.bounds.size.height + 1)
+		let contentHeight = max(lastFrame.origin.y + lastFrame.size.height + editingBottomHolderHeight, UIScreen.main.bounds.size.height + 1)
 
 		contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: contentHeight)
 	}
