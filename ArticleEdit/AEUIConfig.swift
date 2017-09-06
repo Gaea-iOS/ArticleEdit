@@ -112,6 +112,8 @@ public class AEUIConfig {
 		
 		public var leastTextHeight: CGFloat = 20
 		
+		public var bottomSeparatorColor: UIColor = .lightGray
+		
 		public var insets: UIEdgeInsets = UIEdgeInsets(top: 14, left: 15, bottom: 14, right: 15)
 	}
 	

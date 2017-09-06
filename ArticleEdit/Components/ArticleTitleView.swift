@@ -70,11 +70,11 @@ public class ArticleTitleView: ArticleComponent, UITextViewDelegate {
 			make.height.greaterThanOrEqualTo(config.leastTextHeight)
 			make.edges.equalToSuperview().inset(config.insets)
 		}
-		
+
         let dashedView = UIView()
         addSubview(dashedView)
         dashedView.frame = CGRect(x: config.insets.left, y: self.bounds.size.height - 1, width: UIScreen.main.bounds.size.width - config.insets.left - config.insets.right, height: 1)
-        dashedView.drawLine(type: .dashed, in: [.bottom])
+		dashedView.drawLine(type: .dashed, in: [.bottom], color: config.bottomSeparatorColor)
         dashedView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(AEUIConfig.shared.titleConfig.insets.left)
             make.bottom.equalToSuperview()
