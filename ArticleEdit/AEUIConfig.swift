@@ -23,9 +23,7 @@ public class AEUIConfig {
 		let bundle = Bundle(path: path)
 		
 		let image = UIImage(named: name, in: bundle, compatibleWith: nil)
-		
-		print(path)
-		
+
 		return image
 	}
 	
