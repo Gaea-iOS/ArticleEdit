@@ -94,8 +94,19 @@ open class ArticleView: UIScrollView, UIScrollViewDelegate {
 	/// 刷新布局
 	public func updateLayout() {
 		updateConstraints()
-		layoutIfNeeded()
+		updateContentSize()
 		needRefreshOffSet()
+	}
+	
+	/// 刷新contentSize 
+	public func updateContentSize() {
+		layoutIfNeeded()
+
+		guard let lastFrame = contentView.subviews.last?.frame else {
+			return
+		}
+		let contentHeight = max(lastFrame.origin.y + lastFrame.size.height + editingBottomHolderHeight, UIScreen.main.bounds.size.height + 1)
+		contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: contentHeight)
 	}
 	
 	/// 插入数行
@@ -168,16 +179,7 @@ open class ArticleView: UIScrollView, UIScrollViewDelegate {
 			
 			lastView = view
 		}
-        
-        self.layoutIfNeeded()
-        
-        guard let lastFrame = contentView.subviews.last?.frame else {
-            return
-        }
-
-		let contentHeight = max(lastFrame.origin.y + lastFrame.size.height + editingBottomHolderHeight, UIScreen.main.bounds.size.height + 1)
-
-		contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: contentHeight)
+        updateContentSize()
 	}
 	
 	// MARK: - UIScrollView delegate
