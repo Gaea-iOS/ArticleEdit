@@ -8,8 +8,6 @@
 
 import UIKit
 
-public class ArticleComponent: UIView {
-
+open class ArticleComponent: UIView {
 	
-
 }

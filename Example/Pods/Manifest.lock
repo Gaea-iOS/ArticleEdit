@@ -1,5 +1,5 @@
 PODS:
-  - ArticleEdit (0.1.8):
+  - ArticleEdit (0.1.9):
     - SnapKit (= 3.2.0)
   - SnapKit (3.2.0)
 
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ArticleEdit: f6c8b3b0bf06934909fa016faea1132e97d854a8
+  ArticleEdit: 16d989573d8f5091a9c179c0231356102850833d
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
 PODFILE CHECKSUM: dbf9288b739910af6f8feba371a49383c8b23083

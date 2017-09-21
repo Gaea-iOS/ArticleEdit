@@ -13,6 +13,7 @@ public class ArticlePosterData: CustomDebugStringConvertible {
 	public var avatar: String?
 	public var name: String?
 	public var dateString: String?
+	public var isHiddenSubIcon: Bool = false
 	
 	public init() {
 	}
@@ -27,6 +28,11 @@ class ArticlePosterView: ArticleComponent {
 	private lazy var avatarView: UIImageView = {
 		let avatarView = UIImageView()
 		return avatarView
+	}()
+	
+	private lazy var avatarIconView: UIImageView = {
+		let avatarIconView = UIImageView()
+		return avatarIconView
 	}()
 	
 	private lazy var nameLabel: UILabel = {
@@ -56,6 +62,7 @@ class ArticlePosterView: ArticleComponent {
 			guard let posterData = posterData else { return }
 			nameLabel.text = posterData.name
 			timeLabel.text = posterData.dateString
+			avatarIconView.isHidden = posterData.isHiddenSubIcon
 		}
 	}
 	
@@ -78,6 +85,7 @@ class ArticlePosterView: ArticleComponent {
 		addSubview(avatarView)
 		addSubview(nameLabel)
 		addSubview(timeLabel)
+		addSubview(avatarIconView)
 		
 		avatarView.layer.cornerRadius = AEUIConfig.shared.posterConfig.avaterHeight / 2
 		avatarView.layer.masksToBounds = true
@@ -86,6 +94,14 @@ class ArticlePosterView: ArticleComponent {
 			make.top.equalToSuperview().offset(AEUIConfig.shared.posterConfig.insets.top)
 			make.bottom.equalToSuperview().offset(-AEUIConfig.shared.posterConfig.insets.bottom)
 			make.width.height.equalTo(AEUIConfig.shared.posterConfig.avaterHeight)
+		}
+		
+		avatarIconView.image = AEUIConfig.image(name: "icon_vip.png")
+		avatarIconView.layer.cornerRadius = 6
+		avatarIconView.layer.masksToBounds = true
+		avatarIconView.snp.makeConstraints { (make) in
+			make.right.bottom.equalTo(avatarView)
+			make.width.height.equalTo(12)
 		}
 		
 		nameLabel.snp.makeConstraints { (make) in

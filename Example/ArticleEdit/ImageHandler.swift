@@ -28,7 +28,7 @@ public class DefaultImageSelector: NSObject, ImageSelectorType, SinglePhotoSelec
 		successHandler = success
 		
 		imagePicker.selectImageDelegate = self
-		imagePicker.show(in: UIViewController.topMostController, allowEdit: true)
+		imagePicker.show(in: UIViewController.topMostController, allowEdit: false)
 	}
 	
 	public func didFinishChoiseImage(_ image: UIImage, fromSelectView manager: PhotoSelectManager) {
